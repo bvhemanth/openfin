@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;overflow-x: hidden; }
+h1,
+h2,
+h3,
+p,
+div,
+span,
+mat-card { margin: 0; 
+    font-family: 'Montserrat', sans-serif !important; 
+}
+
+.border{
+    height: .3rem;
+    background-color: #000;
+    width: 15%;
+    border-radius: 3rem;
+}
+
+button{
+    border-radius: 2rem;
+    height: 45px;
+    outline: none;
+}

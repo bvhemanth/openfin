@@ -1,0 +1,78 @@
+.top-sect{
+    background-image: url(/assets/images/blob-small.svg), url(/assets/images/circle@2x.png);
+    background-size: 30%, 60%;
+    background-position: -10% 30% , 120% -90px;
+    // calc(100% - 110%),
+    background-repeat: no-repeat, no-repeat;;
+}
+
+
+.menu{
+    #logo{
+        width: 5rem;
+    }
+    
+    ul{
+        list-style-type: none;
+    }
+    li{
+        float: left;
+        height: 45px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        a{
+            color:#222222;
+        }
+    }
+    .login{
+        width: 118px;
+    }
+    .getstart{
+        width: 166px;
+    }
+    button{
+        border: 2px solid #663399;    
+        box-shadow: 0px 0px 20px #70707033;
+         &:hover{
+           background: transparent linear-gradient(90deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
+            color:#fff;
+        }
+    }
+}
+
+// when fixed header
+.fixed{
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 99;
+    #logo{
+        width: 4rem !important;
+    }
+}
+
+.concept{
+    width: 75%;
+    margin: auto;
+    position: relative;
+   
+    &__title{
+        font-size: 2.5rem;
+    }
+    &__logo{
+        width: 85%;
+        z-index: 3;
+    }
+    &__dots{
+        position: absolute;
+        bottom: -27px;
+        left: 50%;
+        height: 3rem;
+        z-index: 0;
+        img{
+            width: 100%;
+        }
+    }
+}
