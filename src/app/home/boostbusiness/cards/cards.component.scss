@@ -1,8 +1,4 @@
 mat-card {
-    img{
-        height: 5rem;
-        width: 5rem;
-    }
     box-sizing: border-box;
     border-radius: .7rem;
     h3{
@@ -11,6 +7,10 @@ mat-card {
     }
     p{
         color: #999999;
+    }
+    img{
+        height: 5rem;
+        width: 5rem;
     }
     &:hover{
         background: transparent;
