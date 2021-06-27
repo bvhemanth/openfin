@@ -3,55 +3,55 @@
         <mat-card-title class="mb-2 text-center">
             Eligibility Calculator
         </mat-card-title>
-        <div class="pb-2">
-            <label>Monthly Income </label><br/>
-            {{monthlyIncome.value | currency:'INR'}}
-            
-            <mat-slider class="p-0" min="0" max="700000" #monthlyIncome step="1000" value="500000" class="w-100 slider"></mat-slider>
-            <div class="calculator__slider-wrapper">    
-                <span class="left">{{monthlyIncome.min | currency:'INR'}}</span>
-                <span class="right">{{monthlyIncome.max | currency:'INR'}}</span>
+        <form [formGroup]="calculator">
+            <div class="pb-2">
+                <label>Monthly Income </label><br/>
+                {{monthlyIncome.value | currency:'INR'}}
+                <mat-slider formControlName="monthlyIncome" class="p-0" min="0" max="700000" #monthlyIncome step="1000" value="500000" class="w-100 slider"></mat-slider>
+                <div class="calculator__slider-wrapper">    
+                    <span class="left">{{monthlyIncome.min | currency:'INR'}}</span>
+                    <span class="right">{{monthlyIncome.max | currency:'INR'}}</span>
+                </div>
             </div>
-        </div>
-        <div class="mb-2">
-            <label> Monthly Expense</label><br/>
-            {{monthlyExpense.value | currency:'INR'}}
-            <mat-slider min="0" max="700000" #monthlyExpense step="1000" value="70000" class="w-100"></mat-slider>
-        </div>
-        <div class="mb-2">
-            <mat-form-field appearance="fill" class="w-100">
-                <mat-label>Repayment Tenure</mat-label>  
-                <mat-select>
-                    <mat-option value="5">5 Months</mat-option>
-                    <mat-option value="6">6 Months</mat-option>
-                    <mat-option value="7">7 Months</mat-option>
-                    <mat-option value="8">8 Months</mat-option>
-                    <mat-option value="9">9 Months</mat-option>
-                </mat-select>
-            </mat-form-field>
-        </div>
-        <div class="mb-2">
-            <label>Do you have any existing loans?</label>     
-            <mat-slide-toggle class="float-md-right"></mat-slide-toggle>
-        </div>
-        <div>
-            <mat-form-field class="example-form-field w-100">
-                <mat-label>EMI of existing loan (optional)</mat-label>
-                <input matInput type="text">
-            </mat-form-field>
-        </div>
-     
+            <div class="mb-2">
+                <label> Monthly Expense</label><br/>
+                {{monthlyExpense.value | currency:'INR'}}
+                <mat-slider formControlName="monthlyExpense" min="0" max="700000" #monthlyExpense step="1000" value="70000" class="w-100"></mat-slider>
+            </div>
+            <div class="mb-2">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Repayment Tenure</mat-label>  
+                    <mat-select formControlName="repaymentTenure">
+                        <mat-option value="5">5 Months</mat-option>
+                        <mat-option value="6">6 Months</mat-option>
+                        <mat-option value="7">7 Months</mat-option>
+                        <mat-option value="8">8 Months</mat-option>
+                        <mat-option value="9">9 Months</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="mb-2">
+                <label>Do you have any existing loans?</label>     
+                <mat-slide-toggle formControlName="loans" class="toggle"></mat-slide-toggle>
+            </div>
+            <div>
+                <mat-form-field class="example-form-field w-100">
+                    <mat-label>EMI of existing loan (optional)</mat-label>
+                    <input matInput formControlName="EMI" type="text">
+                </mat-form-field>
+            </div>
+        </form>
     </mat-card>
     <div class="widget__dots">
         <img src="assets/icons/accounting_dots.svg" alt="">
     </div>
-<div class="output ms-1 text-center py-5 align-middle">
-    <label>Loan Amount</label>
-    {{loanFinal | currency:'INR'}}
-    <label class="mt-3">Your EMI Will be</label>
-    {{emiFinal | currency:'INR'}}                    
-    <button class="px-3 getmoney mt-3">
-        GET MONEY
-    </button>
-</div>
+    <div class="output ms-1 text-center py-5 align-middle">
+        <label>Loan Amount</label>
+        {{loanFinal | currency:'INR'}}
+        <label class="mt-3">Your EMI Will be</label>
+        {{emiFinal | currency:'INR'}}                    
+        <button class="px-3 getmoney mt-3">
+            GET MONEY
+        </button>
+    </div>
 </div>

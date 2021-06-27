@@ -2,12 +2,12 @@
     background-image: url(/assets/images/blob-small.svg), url(/assets/images/circle@2x.png);
     background-size: 30%, 60%;
     background-position: -10% 30% , 120% -90px;
-    // calc(100% - 110%),
     background-repeat: no-repeat, no-repeat;;
 }
 
 
 .menu{
+    transition:all 0.4s;
     #logo{
         width: 5rem;
     }
@@ -23,6 +23,9 @@
         align-items: center;
         a{
             color:#222222;
+            &:hover{
+                color: #663399;
+            }
         }
     }
     .login{
@@ -40,12 +43,14 @@
 
 // when fixed header
 .fixed{
+    transition:all 0.5s;
     position: fixed;
     top:0;
     width: 100%;
     background-color: #fff;
     z-index: 99;
     #logo{
+        transition:all 0.5s;
         width: 4rem !important;
     }
 }

@@ -14,6 +14,9 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatInputModule} from '@angular/material/input';
 import { CardsComponent } from './home/boostbusiness/cards/cards.component';
 import { WidgetComponent } from './home/wemakeit/widget/widget.component';
+import { FormsModule } from '@angular/forms';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { WidgetComponent } from './home/wemakeit/widget/widget.component';
     MatCardModule,
     MatSelectModule,
     MatSlideToggleModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

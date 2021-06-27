@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-widget',
@@ -8,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class WidgetComponent implements OnInit {
   loanFinal="100000";
   emiFinal="15000";
-  monthlyIncome:number=500000;
-  constructor() { }
+  calculator:FormGroup;
+
+  constructor(public fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.buildForm();
   }
-
+  buildForm(){
+    this.calculator=this.fb.group({
+      monthlyIncome: new FormControl(500000),
+      monthlyExpense: new FormControl(70000),
+      repaymentTenure: new FormControl(),
+      loans: new FormControl(),
+      EMI: new FormControl()
+    });
+  }
 }

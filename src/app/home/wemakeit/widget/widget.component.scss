@@ -18,6 +18,9 @@
             display: flex;
             justify-content: space-between;
         }
+        .toggle{
+            float: right;
+        }
     }
     &__dots{
         z-index: 0;
