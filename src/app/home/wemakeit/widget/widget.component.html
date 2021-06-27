@@ -46,10 +46,15 @@
         <img src="assets/icons/accounting_dots.svg" alt="">
     </div>
     <div class="output ms-1 text-center py-5 align-middle">
-        <label>Loan Amount</label>
-        {{loanFinal | currency:'INR'}}
-        <label class="mt-3">Your EMI Will be</label>
-        {{emiFinal | currency:'INR'}}                    
+        <div>
+            <label>Loan Amount</label><br/>
+            {{loanFinal | currency:'INR'}}
+        </div>
+        <div>
+            <label class="mt-3">Your EMI Will be</label><br/>
+            {{emiFinal | currency:'INR'}}  
+        </div>
+                         
         <button class="px-3 getmoney mt-3">
             GET MONEY
         </button>
