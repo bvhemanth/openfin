@@ -1,5 +1,6 @@
 mat-card {
     box-sizing: border-box;
+    height: 13rem;
     border-radius: .7rem;
     h3{
         font-size: 1rem;
@@ -34,10 +35,12 @@ mat-card {
     float: left;
     list-style: none;
     height: 100%;
+    width: 40%;
+    &:first-child{
+        margin-right: 3%;
+    }
 }
 .flex-item{
-    width: 20rem;
-    min-height: 11rem;
-    max-height: 13rem;
-    margin: .4rem;
+    width: 100%;
+    margin: 4%;
 }
